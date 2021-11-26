@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+                full of javascript(2)
+        </title>
+    </head>
+    <body>
+         <form  name="form1">
+             Enter your name:<input type="text" name="name">
+             Enter your mobno:<input type="number" id="mobno">
+              male<input type="radio" name="gender">
+              female <input type="radio" name="gender">
+              other <input type="radio" name="gender">
+              <p>happy to see all</p>
+              <p>vinith Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, laborum.</p>
+             <input type="button" onclick="printvalue()" value="print name">
+         </form>
+    </body>
+    <script>
+           function printvalue()
+           {
+               var name=document.form1.name.value;
+               alert("welcome "+name);
+               var number=document.getElementById("mobno").value;
+               alert("your no is "+number);
+               var allgen = document.getElementsByName("gender");
+               alert("no of genders are"+allgen.length);
+               var countchar=document.getElementsByTagName("p");
+               alert("no of char in paragh is "+countchar.length);
+           }
+    </script>
+</html>

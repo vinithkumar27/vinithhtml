@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <!--for external connection of javascript by 
+        <script src=first.js></script>-->
+        <title>
+            Full of JavaScript
+        </title>
+        <script>
+              function msg()
+              {
+                  alert("incorrect message");
+              }
+        </script>
+    </head>
+    <body>
+         <script>
+             alert("hi man");
+         </script>
+         <form>
+             <input type="button" value="click" onclick="msg()">
+             <input type="button" value="cube" onclick="getcube(3)">
+         </form>
+         <input type="button" onclick="chellama()" value="chellama">
+    </body>
+    <script>
+        document.write("hello javascript by vinith"+"<br>");
+        let a=10;
+        let b=20;
+        let c=a+b;
+        document.write("value of c is "+c+"<br>");
+        var age=33;
+        if(age>18)
+        {
+            document.write("He is qualified for vote");
+            document.write("<br>");
+        }
+        else
+        {
+            document.write("sorry you are not qualified man");
+            document.write("<br>");
+        }
+        //switch case
+        let grade='A';
+        let result;
+        switch(grade)
+        {
+             case 'A':
+                 {
+                     result="A grade";
+                     break;
+                 }
+             case 'B':
+                 {
+                     result="B grade";
+                     break;
+                 }
+             default:
+                 {
+           ;          result:"No Grade";
+                 }
+        }
+        document.write("He got "+result+"<br>");
+
+        //for loop
+        
+        for(var i=0;i<10;i++)
+        {
+            document.write(i+"   ");
+        }
+        document.write("<br>");
+        //while loop and do-while
+        var j=0;
+        while(j<10)
+        {
+            document.write(j+"   ");
+            j++;
+        }
+        document.write("<br>");
+        //function with arguments
+        function getcube(number)
+        {
+            alert(number*number*number);
+        }
+        //function with return value
+        function getinfo()
+        {
+            return "hello vinith how are you";
+        }
+        document.write(getinfo());
+        document.write("<br>");
+
+        //function
+        var add=new Function("num1","num2","return num1+num2");
+        document.writeln(add(2,5));
+
+        var pow =new Function("num1","num2","return Math.pow(num1,num2)");
+        document.writeln(pow(2,3));
+
+        //object literal
+        student={id:101,name:"vinith",salary:3000};
+        document.writeln(student.id+" "+student.name+" "+student.salary);
+        //instance of object
+        var stud=new Object();
+        stud.id=100;
+        stud.name="dhoni";
+        stud.salary=23232;
+        document.writeln(stud.id+"  "+stud.name+"  "+stud.salary+"<br>");
+
+        //array
+        var arr1=["vinith","mari","surya","sasi","sachin"];
+        for(let i=0;i<arr1.length;i++)
+        {
+            document.writeln(arr1[i]+"<br>");
+        }
+        var arr2=["mani"];
+        var results=arr1.concat(arr2);//concat method
+        document.writeln(results+"<br>");
+        var results1=arr1.copyWithin(0,1,2);
+        document.writeln(results1+"<br>");
+         
+        //string
+        var str="hello javascript";
+        var str1=" vinith";
+        document.writeln(str);
+        document.writeln(str.charAt(2));
+        var str2=str.concat(str1);
+        document.writeln(str2);
+        var n=str.indexOf("java");//lastindexof
+        document.writeln(n);
+        //tolowercase,touppercase
+        var str3=str.slice(2,5);
+        document.writeln(str3+"<br>");
+        document.writeln(str.split(" ")+"<br>");
+
+        //js date
+        var dat1=new Date();
+        var day=dat1.getDate();
+        var month=dat1.getMonth()+1;
+        var year=dat1.getFullYear();
+        document.write(day+"/"+month+"/"+year+"<br>");
+        //math functions in js
+        var anss=Math.sqrt(7);
+        document.writeln(anss+"<br>");
+        //numbers,booleans
+        //window objects
+        alert("fire");
+        function msg()
+        {
+        var v=confirm("are you sure?");
+        if(v==true)
+        {
+            alert("okay");
+        }
+        else
+        {
+            alert("cancel order");
+        }
+        }
+           msg();
+        var prompt1 =prompt("who are you");
+        alert("i am "+prompt1);
+        function chellama()
+        {
+        open("https://www.youtube.com/watch?v=DV7nV9W7y-0");
+        }
+        setTimeout(() => {
+            alert("welcome after 3 seconds");
+        }, 3000);
+        //history objects
+        //navigator objects
+        document.write("<br> navigator.appCodeName:"+navigator.appCodeName);
+        document.write("<br> navigator.userAgent:"+navigator.userAgent);
+        //screen objects
+        document.write("<br> screen.width: "+screen.width+"height"+screen.height);
+        
+    </script>
+</html>
