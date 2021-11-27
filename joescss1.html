@@ -14,10 +14,13 @@
         {
              color: red;
         }
-        #box p
+        /*id have first priority
+          class have second priority
+          elements are third priority*/
+       /* #box p
         {
             color: turquoise;
-        }
+        }*/
         p
         {
             color: blue;
@@ -29,8 +32,75 @@
         }
         p
         {
-            color: tomato;
+            color: tomato /*!important*/;
             /*OVERRIDE OF P TAGS*/
+        }
+        .test
+        {
+            color: gold;
+        }
+       h1,h3,.box p
+       {
+           color: greenyellow;
+       }
+       /*.box>p{} only child is accessed not grand child
+        .box+p{} first p only changed*/
+        a[title="link2"]
+        {
+            color: grey;
+        }
+        a{text-decoration: none;}
+        a:hover
+        {
+            color: red;
+        }
+        a:active
+        {
+            color: royalblue;
+        }
+        a:visited
+        {
+            color: pink;
+        }
+
+        ul li:first-child
+        {
+            color: red;
+        }/*last-child,nth-child(4),(odd),(even)*/
+        
+        .rack
+        {
+            height: 200px;
+            width: 200px;
+            background:-webkit-linear-gradient(left,orange,red,black);
+            /*radial gradient,degreee*/
+            border-radius:0px 20px 0px 20px;
+        }
+        html{
+            background-color: grey;
+        }
+        body
+        {
+            background-color: white;
+            height: 500px;
+            width: 500px;
+            margin: 200px auto;
+        }
+        .row
+        {
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+        .boxx
+        {
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+        .black
+        {
+            background: black;
         }
     </style>
 </head>
@@ -55,6 +125,54 @@
         <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, aliquid!</P>
         <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, perferendis.</P>
         <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia!</P>
+        <p class="test">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, nesciunt?</p>
       </div>
+      <!--more selectors in css-->
+      <h1>more selectors in css</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, laborum.</p>
+       <h4>vinith kumar</h4>
+       <div class="box">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, est.</p> 
+       </div>
+       <!--pseudo class in css-->
+       <a href="#" title="link1">Link1</a>
+       <a href="#" title="link2">Link2</a>
+       <a href="#" title="link3">Link3</a>
+       <a href="#" title="link4">Link4</a>
+       <!--access child in css-->
+       <ul>
+           <li>java vinith 1</li>
+           <li>java vinith 2</li>
+           <li>java vinith 3</li>
+           <li>java vinith 4</li>
+           <li>java vinith 5</li>
+       </ul>
+       <!--gradient color in css-->
+       <!--border radius in css-->
+       <!--colors in css-->
+       <h2>Gradient color in css</h2>
+       <div class="rack"></div>
+        <div class="row">
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+        </div>
+        <div class="row">
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+            <div class="boxx black"></div>
+            <div class="boxx"></div>
+        </div>
 </body>
 </html>
